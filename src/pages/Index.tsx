@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import BakeryHeader from '@/components/BakeryHeader';
+import BakeryHero from '@/components/BakeryHero';
+import BakeryCategories from '@/components/BakeryCategories';
+import BakeryBestsellers from '@/components/BakeryBestsellers';
+import BakeryFeatures from '@/components/BakeryFeatures';
+import BakeryTestimonials from '@/components/BakeryTestimonials';
+import BakeryFooter from '@/components/BakeryFooter';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <BakeryHeader />
+      <main className="flex-grow">
+        <BakeryHero />
+        <BakeryCategories />
+        <BakeryBestsellers />
+        <BakeryFeatures />
+        <BakeryTestimonials />
+      </main>
+      <BakeryFooter />
     </div>
   );
 };
