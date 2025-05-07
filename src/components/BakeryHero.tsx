@@ -12,9 +12,6 @@ const BakeryHero: React.FC = () => {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col gap-6">
-            <div className="inline-flex gap-2">
-              <span className="px-3 py-1 bg-bakery-gold/20 text-bakery-gold rounded-full text-sm font-medium">✨ Натуральная выпечка</span>
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-bakery-brown leading-tight">
               Свежая выпечка <wbr />с&nbsp;любовью каждый&nbsp;день
             </h1>
@@ -45,19 +42,10 @@ const BakeryHero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-full bg-bakery-gold/20 absolute -top-10 -right-10 w-40 h-40"></div>
             <img 
-              src="https://images.unsplash.com/photo-1613929231151-2cb92c6ce9ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              src="https://images.unsplash.com/photo-1586444248879-12445284bc1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
               alt="Свежие булочки с корицей" 
               className="rounded-2xl shadow-xl relative z-10"
             />
-            <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 hover-scale">
-              <div className="bg-bakery-gold/20 rounded-full p-2">
-                <Icon name="ThumbsUp" className="h-5 w-5 text-bakery-gold" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-bakery-brown">Более 1000</p>
-                <p className="text-xs text-gray-500">Довольных клиентов</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

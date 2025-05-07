@@ -9,7 +9,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { Badge } from '@/components/ui/badge';
 
 const BakeryHeader: React.FC = () => {
   const isMobile = useIsMobile();
@@ -29,7 +28,7 @@ const BakeryHeader: React.FC = () => {
           <span className="sr-only">Меню</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="bg-white w-64">
+      <SheetContent side="left" className="bg-bakery-cream w-64">
         <div className="flex flex-col gap-6 pt-10">
           <div className="font-playfair text-2xl font-bold text-bakery-brown">
             Вкусняшка
@@ -51,12 +50,11 @@ const BakeryHeader: React.FC = () => {
   );
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b shadow-sm">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 flex items-center justify-between h-20">
         {isMobile && <MobileMenu />}
         
-        <div className="font-playfair text-2xl md:text-3xl font-bold text-bakery-brown flex items-center gap-2">
-          <Icon name="Croissant" className="h-6 w-6 text-bakery-gold" />
+        <div className="font-playfair text-2xl md:text-3xl font-bold text-bakery-brown">
           <Link to="/">Вкусняшка</Link>
         </div>
         
@@ -72,20 +70,14 @@ const BakeryHeader: React.FC = () => {
           ))}
         </nav>
         
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" className="text-bakery-brown">
             <Icon name="Search" className="h-5 w-5" />
             <span className="sr-only">Поиск</span>
           </Button>
-          <div className="relative">
-            <Button variant="ghost" size="icon" className="text-bakery-brown">
-              <Icon name="ShoppingCart" className="h-5 w-5" />
-              <span className="sr-only">Корзина</span>
-            </Button>
-            <Badge className="absolute -top-1 -right-1 bg-bakery-gold text-white px-1.5 py-0.5 text-xs">2</Badge>
-          </div>
-          <Button className="hidden md:flex bg-bakery-brown hover:bg-bakery-chocolate text-white">
-            Заказать
+          <Button variant="ghost" size="icon" className="text-bakery-brown">
+            <Icon name="ShoppingCart" className="h-5 w-5" />
+            <span className="sr-only">Корзина</span>
           </Button>
         </div>
       </div>

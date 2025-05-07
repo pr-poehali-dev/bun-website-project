@@ -1,7 +1,6 @@
 
 import React from 'react';
 import Icon from '@/components/ui/icon';
-import { Button } from '@/components/ui/button';
 
 const features = [
   {
@@ -39,7 +38,7 @@ const BakeryFeatures: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.title} className="flex flex-col items-center text-center hover-scale">
+            <div key={feature.title} className="flex flex-col items-center text-center">
               <div className="p-4 bg-white rounded-full shadow-md mb-4">
                 <Icon name={feature.icon} className="h-8 w-8 text-bakery-gold" />
               </div>
@@ -49,16 +48,16 @@ const BakeryFeatures: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+        <div className="mt-16 bg-bakery-brown/10 rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-bakery-brown mb-4">
                 Наш процесс выпечки
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-4">
                 Мы придерживаемся строгих стандартов качества и использования только лучших ингредиентов. Каждое изделие проходит контроль качества перед тем, как попасть к вам на стол.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   "Отбор натуральных ингредиентов",
                   "Ручное замешивание теста",
@@ -73,14 +72,10 @@ const BakeryFeatures: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="mt-6 bg-bakery-brown hover:bg-bakery-chocolate text-white">
-                Узнать больше
-                <Icon name="ArrowRight" className="ml-2 h-4 w-4" />
-              </Button>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                 alt="Процесс выпечки" 
                 className="rounded-xl shadow-lg"
               />
