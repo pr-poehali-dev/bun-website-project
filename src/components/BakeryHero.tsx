@@ -13,7 +13,7 @@ const BakeryHero: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col gap-6">
             <h1 className="text-4xl md:text-6xl font-bold text-bakery-brown leading-tight">
-              Свежая выпечка с любовью каждый день
+              Свежая выпечка <wbr />с&nbsp;любовью каждый&nbsp;день
             </h1>
             <p className="text-lg text-gray-700 md:pr-12">
               Наши булочки и выпечка готовятся вручную из натуральных ингредиентов по традиционным рецептам. Каждый кусочек — это маленькое наслаждение.
