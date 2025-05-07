@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Булочка с маком",
+    name: "Выпечка на заказ",
     price: 110,
     image: "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Новинка",
