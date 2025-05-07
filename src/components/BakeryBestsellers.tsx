@@ -10,16 +10,18 @@ const products = [
     id: 1,
     name: "Булочка с корицей",
     price: 120,
-    image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Хит",
-    rating: 4.9
+    rating: 4.9,
+    description: "Нежная булочка с ароматной корицей"
   },
   {
     id: 2,
     name: "Круассан с шоколадом",
     price: 150,
     image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    rating: 4.7
+    rating: 4.7,
+    description: "Слоеный круассан с шоколадной начинкой"
   },
   {
     id: 3,
@@ -27,14 +29,16 @@ const products = [
     price: 110,
     image: "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Новинка",
-    rating: 4.5
+    rating: 4.5,
+    description: "Индивидуальные заказы по вашим пожеланиям"
   },
   {
     id: 4,
     name: "Ватрушка с творогом",
     price: 135,
-    image: "https://images.unsplash.com/photo-1620921575116-fb8902865f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    rating: 4.8
+    image: "https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    rating: 4.8,
+    description: "Традиционная ватрушка со сладким творогом"
   }
 ];
 
@@ -55,7 +59,7 @@ const BakeryBestsellers: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow">
+            <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow hover-scale">
               <div className="relative">
                 <img 
                   src={product.image} 
@@ -63,7 +67,7 @@ const BakeryBestsellers: React.FC = () => {
                   className="w-full h-60 object-cover"
                 />
                 {product.badge && (
-                  <Badge className="absolute top-3 right-3 bg-bakery-gold text-white">
+                  <Badge className="absolute top-3 right-3 bg-bakery-gold text-white font-medium">
                     {product.badge}
                   </Badge>
                 )}
@@ -76,6 +80,7 @@ const BakeryBestsellers: React.FC = () => {
                     <span className="text-sm font-medium">{product.rating}</span>
                   </div>
                 </div>
+                <p className="text-gray-500 text-sm mt-1 h-10">{product.description}</p>
                 <p className="text-bakery-brown font-semibold mt-2">{product.price} ₽</p>
               </CardContent>
               <CardFooter className="pt-0 pb-4">

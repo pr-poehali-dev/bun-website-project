@@ -47,7 +47,7 @@ const testimonials = [
 
 const BakeryTestimonials: React.FC = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-b from-white to-bakery-cream/20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-2 text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-bakery-brown">Отзывы клиентов</h2>
@@ -60,13 +60,13 @@ const BakeryTestimonials: React.FC = () => {
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="border-none shadow-md h-full">
+                <Card className="border-none shadow-lg h-full hover-scale">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-4">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
-                        className="w-14 h-14 rounded-full object-cover"
+                        className="w-14 h-14 rounded-full object-cover border-2 border-bakery-gold"
                       />
                       <div>
                         <h4 className="font-medium text-bakery-brown">{testimonial.name}</h4>
@@ -84,7 +84,7 @@ const BakeryTestimonials: React.FC = () => {
                       ))}
                     </div>
                     
-                    <blockquote className="text-gray-600 flex-1">
+                    <blockquote className="text-gray-600 flex-1 italic">
                       "{testimonial.quote}"
                     </blockquote>
                     

@@ -1,20 +1,9 @@
-
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const config = {
+export default {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: "",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
@@ -24,6 +13,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        playfair: ["Playfair Display", "serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,14 +62,10 @@ const config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        bakery: {
-          'brown': '#9b5a3b',
-          'cream': '#FFF5E1',
-          'gold': '#f3c06b',
-          'cinnamon': '#D2691E',
-          'butter': '#F8D568',
-          'chocolate': '#3C2218',
-        },
+        "bakery-brown": "#6B4226",
+        "bakery-gold": "#E8A95C",
+        "bakery-cream": "#F8ECD1",
+        "bakery-chocolate": "#3F2212",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -96,13 +86,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'poppins': ['Poppins', 'sans-serif'],
-      },
+      boxShadow: {
+        'smooth': '0 4px 20px rgba(0, 0, 0, 0.05)'
+      }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
-
-export default config;

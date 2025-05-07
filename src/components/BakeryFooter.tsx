@@ -13,21 +13,24 @@ const BakeryFooter: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
-            <h3 className="font-playfair text-2xl font-bold text-bakery-gold">Вкусняшка</h3>
+            <div className="flex items-center gap-2">
+              <Icon name="Croissant" className="h-6 w-6 text-bakery-gold" />
+              <h3 className="font-playfair text-2xl font-bold text-bakery-gold">Вкусняшка</h3>
+            </div>
             <p className="text-white/80">
               Наша пекарня предлагает свежую выпечку из натуральных ингредиентов, приготовленную с любовью.
             </p>
             <div className="flex gap-4 mt-2">
-              <a href="#" className="text-white hover:text-bakery-gold transition-colors">
-                <Icon name="Facebook" className="h-5 w-5" />
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                <Icon name="Facebook" className="h-5 w-5 text-bakery-gold" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-white hover:text-bakery-gold transition-colors">
-                <Icon name="Instagram" className="h-5 w-5" />
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                <Icon name="Instagram" className="h-5 w-5 text-bakery-gold" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-white hover:text-bakery-gold transition-colors">
-                <Icon name="Twitter" className="h-5 w-5" />
+              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                <Icon name="Twitter" className="h-5 w-5 text-bakery-gold" />
                 <span className="sr-only">Twitter</span>
               </a>
             </div>
@@ -38,7 +41,8 @@ const BakeryFooter: React.FC = () => {
             <ul className="space-y-3">
               {["Булочки", "Круассаны", "Хлеб", "Пироги", "Десерты"].map((item) => (
                 <li key={item}>
-                  <Link to="#" className="text-white/80 hover:text-bakery-gold transition-colors">
+                  <Link to="#" className="text-white/80 hover:text-bakery-gold transition-colors flex items-center gap-2">
+                    <Icon name="ChevronRight" className="h-4 w-4 text-bakery-gold" />
                     {item}
                   </Link>
                 </li>
@@ -76,11 +80,15 @@ const BakeryFooter: React.FC = () => {
             <div className="flex gap-2">
               <Input 
                 placeholder="Ваш email" 
-                className="bg-bakery-brown/50 border-bakery-gold/30 text-white placeholder:text-white/50 focus-visible:ring-bakery-gold" 
+                className="bg-white/10 border-bakery-gold/30 text-white placeholder:text-white/50 focus-visible:ring-bakery-gold" 
               />
               <Button className="bg-bakery-gold hover:bg-bakery-gold/80 text-bakery-brown">
                 <Icon name="Send" className="h-4 w-4" />
               </Button>
+            </div>
+            <div className="mt-4 p-4 bg-white/5 rounded-lg">
+              <h5 className="font-medium text-bakery-gold mb-1">Скидка 10%</h5>
+              <p className="text-white/80 text-sm">Подпишитесь и получите скидку на первый заказ</p>
             </div>
           </div>
         </div>
