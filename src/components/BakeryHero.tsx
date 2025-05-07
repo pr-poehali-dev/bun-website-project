@@ -45,8 +45,8 @@ const BakeryHero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-full bg-bakery-gold/20 absolute -top-10 -right-10 w-40 h-40"></div>
             <img 
-              src="https://images.unsplash.com/photo-1616671293442-62e9d7e7da05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Свежие булочки с корицей" 
+              src="https://images.unsplash.com/photo-1586302513022-caf780e1e5fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              alt="Ароматные булочки с корицей" 
               className="rounded-2xl shadow-xl relative z-10 object-cover h-full"
             />
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg z-20">

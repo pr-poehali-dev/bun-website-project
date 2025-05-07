@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
@@ -57,18 +58,27 @@ const config = {
           foreground: "hsl(var(--sidebar-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
         },
-        "bakery-brown": "#8B5E3C",
-        "bakery-chocolate": "#654321",
-        "bakery-cream": "#F5ECD6",
-        "bakery-gold": "#D4AF37",
+        bakery: {
+          cream: "#FFF8E1",
+          gold: "#F7C35F",
+          brown: "#8B5E3C",
+          chocolate: "#5C3B26",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        playfair: ['Playfair Display', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
@@ -83,10 +93,6 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      fontFamily: {
-        'playfair': ['"Playfair Display"', 'serif'],
-        'poppins': ['Poppins', 'sans-serif'],
       },
     },
   },

@@ -11,7 +11,7 @@ const products = [
     name: "Булочка с корицей",
     price: 120,
     description: "Ароматная выпечка с корицей и ванилью",
-    image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1633958154878-6ead23122d61?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Хит",
     rating: 4.9
   },
@@ -20,14 +20,14 @@ const products = [
     name: "Круассан с шоколадом",
     price: 150,
     description: "Слоеное тесто с шоколадной начинкой",
-    image: "https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1596915837643-3f38b74af8e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     rating: 4.7
   },
   {
     id: 3,
-    name: "Малиновый пирог",
+    name: "Ягодный пирог",
     price: 180,
-    description: "Нежнейший пирог со свежей малиной",
+    description: "Нежнейший пирог со свежими ягодами",
     image: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Новинка",
     rating: 4.5
@@ -37,7 +37,7 @@ const products = [
     name: "Ватрушка с творогом",
     price: 135,
     description: "Традиционная выпечка с творожной начинкой",
-    image: "https://images.unsplash.com/photo-1586954107035-d261f297c5e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1551403793-8b8aa6db5b4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     rating: 4.8
   }
 ];
@@ -67,7 +67,7 @@ const BakeryBestsellers: React.FC = () => {
                   className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {product.badge && (
-                  <Badge className="absolute top-3 right-3 bg-bakery-gold text-white">
+                  <Badge className={`absolute top-3 right-3 ${product.badge === 'Хит' ? 'bg-bakery-gold' : 'bg-green-500'} text-white`}>
                     {product.badge}
                   </Badge>
                 )}

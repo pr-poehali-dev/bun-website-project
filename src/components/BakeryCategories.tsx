@@ -9,7 +9,7 @@ const categories = [
     icon: "Croissant",
     title: "Круассаны",
     description: "Хрустящие и слоеные",
-    image: "https://images.unsplash.com/photo-1586439702132-28d8dd3759d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-yellow-50",
     iconColor: "text-bakery-gold"
   },
@@ -17,7 +17,7 @@ const categories = [
     icon: "Candy",
     title: "Сладкие булочки",
     description: "Нежные и ароматные",
-    image: "https://images.unsplash.com/photo-1527515545081-5db817172677?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-red-50",
     iconColor: "text-red-400"
   },
@@ -25,7 +25,7 @@ const categories = [
     icon: "Cookie",
     title: "Хлеб",
     description: "Домашний и полезный",
-    image: "https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-amber-50",
     iconColor: "text-amber-600"
   },
@@ -33,7 +33,7 @@ const categories = [
     icon: "Cake",
     title: "Пироги",
     description: "Сытные и аппетитные",
-    image: "https://images.unsplash.com/photo-1535920527002-b35e96722969?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-green-50",
     iconColor: "text-green-500"
   },

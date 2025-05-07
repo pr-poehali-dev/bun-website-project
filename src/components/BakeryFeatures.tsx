@@ -75,8 +75,8 @@ const BakeryFeatures: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1591247378418-c77db4bd0b01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Процесс выпечки" 
+                src="https://images.unsplash.com/photo-1620921568790-c1cf8984624c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Процесс выпечки хлеба" 
                 className="rounded-xl shadow-lg object-cover h-80 w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-bakery-gold p-4 rounded-lg shadow-lg">
