@@ -12,6 +12,9 @@ const BakeryHero: React.FC = () => {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col gap-6">
+            <div className="inline-block px-4 py-1 bg-bakery-gold/20 rounded-full">
+              <p className="text-bakery-brown font-medium text-sm">Испечено с любовью</p>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-bakery-brown leading-tight">
               Свежая выпечка <wbr />с&nbsp;любовью каждый&nbsp;день
             </h1>
@@ -42,10 +45,21 @@ const BakeryHero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-full bg-bakery-gold/20 absolute -top-10 -right-10 w-40 h-40"></div>
             <img 
-              src="https://images.unsplash.com/photo-1586444248879-12445284bc1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              src="https://images.unsplash.com/photo-1616671293442-62e9d7e7da05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
               alt="Свежие булочки с корицей" 
-              className="rounded-2xl shadow-xl relative z-10"
+              className="rounded-2xl shadow-xl relative z-10 object-cover h-full"
             />
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg z-20">
+              <div className="flex items-center gap-3">
+                <div className="bg-green-100 p-2 rounded-full">
+                  <Icon name="Check" className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-bakery-brown">100% Натурально</p>
+                  <p className="text-xs text-gray-600">Без консервантов</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

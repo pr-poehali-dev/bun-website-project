@@ -15,7 +15,7 @@ const testimonials = [
     id: 1,
     name: "Анна Петрова",
     position: "Постоянный клиент",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Булочки здесь просто потрясающие! Корица с булочками - моя любимая комбинация. Всегда беру их по пути на работу.",
     rating: 5
   },
@@ -23,7 +23,7 @@ const testimonials = [
     id: 2,
     name: "Михаил Иванов",
     position: "Фуд-блогер",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Лучшие круассаны в городе! Хрустящие снаружи и мягкие внутри. Качество на высшем уровне, всегда рекомендую своим подписчикам.",
     rating: 5
   },
@@ -31,7 +31,7 @@ const testimonials = [
     id: 3,
     name: "Елена Сидорова",
     position: "Учитель",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Часто заказываю выпечку для школьных мероприятий. Дети в восторге от ваших булочек, а родители спрашивают, где я их заказываю!",
     rating: 4
   },
@@ -39,7 +39,7 @@ const testimonials = [
     id: 4,
     name: "Дмитрий Козлов",
     position: "Менеджер",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Наша компания регулярно заказывает выпечку для офисных встреч. Всегда свежая, вкусная и доставляется вовремя. Спасибо за профессионализм!",
     rating: 5
   }
@@ -47,7 +47,7 @@ const testimonials = [
 
 const BakeryTestimonials: React.FC = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-2 text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-bakery-brown">Отзывы клиентов</h2>
@@ -60,7 +60,7 @@ const BakeryTestimonials: React.FC = () => {
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="border-none shadow-md h-full">
+                <Card className="border-none shadow-md h-full hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-4">
                       <img 
@@ -84,7 +84,7 @@ const BakeryTestimonials: React.FC = () => {
                       ))}
                     </div>
                     
-                    <blockquote className="text-gray-600 flex-1">
+                    <blockquote className="text-gray-600 flex-1 italic">
                       "{testimonial.quote}"
                     </blockquote>
                     

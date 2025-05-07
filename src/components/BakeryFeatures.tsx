@@ -38,8 +38,8 @@ const BakeryFeatures: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.title} className="flex flex-col items-center text-center">
-              <div className="p-4 bg-white rounded-full shadow-md mb-4">
+            <div key={feature.title} className="flex flex-col items-center text-center group">
+              <div className="p-4 bg-white rounded-full shadow-md mb-4 transform transition-transform duration-300 group-hover:scale-110">
                 <Icon name={feature.icon} className="h-8 w-8 text-bakery-gold" />
               </div>
               <h3 className="text-xl font-bold text-bakery-brown mb-2">{feature.title}</h3>
@@ -75,9 +75,9 @@ const BakeryFeatures: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="https://images.unsplash.com/photo-1591247378418-c77db4bd0b01?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                 alt="Процесс выпечки" 
-                className="rounded-xl shadow-lg"
+                className="rounded-xl shadow-lg object-cover h-80 w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-bakery-gold p-4 rounded-lg shadow-lg">
                 <p className="text-white font-playfair font-bold text-xl">15+ лет опыта</p>

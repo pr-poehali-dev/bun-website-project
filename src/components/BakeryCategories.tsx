@@ -9,6 +9,7 @@ const categories = [
     icon: "Croissant",
     title: "Круассаны",
     description: "Хрустящие и слоеные",
+    image: "https://images.unsplash.com/photo-1586439702132-28d8dd3759d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-yellow-50",
     iconColor: "text-bakery-gold"
   },
@@ -16,6 +17,7 @@ const categories = [
     icon: "Candy",
     title: "Сладкие булочки",
     description: "Нежные и ароматные",
+    image: "https://images.unsplash.com/photo-1527515545081-5db817172677?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-red-50",
     iconColor: "text-red-400"
   },
@@ -23,6 +25,7 @@ const categories = [
     icon: "Cookie",
     title: "Хлеб",
     description: "Домашний и полезный",
+    image: "https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-amber-50",
     iconColor: "text-amber-600"
   },
@@ -30,6 +33,7 @@ const categories = [
     icon: "Cake",
     title: "Пироги",
     description: "Сытные и аппетитные",
+    image: "https://images.unsplash.com/photo-1535920527002-b35e96722969?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     color: "bg-green-50",
     iconColor: "text-green-500"
   },
@@ -48,13 +52,20 @@ const BakeryCategories: React.FC = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <Card key={category.title} className={`${category.color} border-none shadow-sm hover:shadow-md transition-shadow`}>
-              <CardContent className="p-6 flex flex-col items-center text-center gap-4">
-                <div className={`p-3 rounded-full ${category.color}`}>
-                  <Icon name={category.icon} className={`h-8 w-8 ${category.iconColor}`} />
+            <Card key={category.title} className="border-none shadow-sm hover:shadow-md transition-shadow overflow-hidden group cursor-pointer">
+              <div className="relative h-40 overflow-hidden">
+                <img 
+                  src={category.image} 
+                  alt={category.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                  <h3 className="font-semibold text-lg text-white">{category.title}</h3>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-bakery-brown">{category.title}</h3>
+              </div>
+              <CardContent className={`p-4 flex flex-col items-center text-center gap-2 ${category.color}`}>
+                <div className="flex items-center gap-2">
+                  <Icon name={category.icon} className={`h-5 w-5 ${category.iconColor}`} />
                   <p className="text-gray-600 text-sm">{category.description}</p>
                 </div>
               </CardContent>

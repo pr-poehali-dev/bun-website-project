@@ -10,6 +10,7 @@ const products = [
     id: 1,
     name: "Булочка с корицей",
     price: 120,
+    description: "Ароматная выпечка с корицей и ванилью",
     image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Хит",
     rating: 4.9
@@ -18,14 +19,16 @@ const products = [
     id: 2,
     name: "Круассан с шоколадом",
     price: 150,
-    image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    description: "Слоеное тесто с шоколадной начинкой",
+    image: "https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     rating: 4.7
   },
   {
     id: 3,
-    name: "Выпечка на заказ",
-    price: 110,
-    image: "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    name: "Малиновый пирог",
+    price: 180,
+    description: "Нежнейший пирог со свежей малиной",
+    image: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     badge: "Новинка",
     rating: 4.5
   },
@@ -33,7 +36,8 @@ const products = [
     id: 4,
     name: "Ватрушка с творогом",
     price: 135,
-    image: "https://images.unsplash.com/photo-1620921575116-fb8902865f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    description: "Традиционная выпечка с творожной начинкой",
+    image: "https://images.unsplash.com/photo-1586954107035-d261f297c5e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     rating: 4.8
   }
 ];
@@ -55,12 +59,12 @@ const BakeryBestsellers: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow">
-              <div className="relative">
+            <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow group">
+              <div className="relative overflow-hidden">
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {product.badge && (
                   <Badge className="absolute top-3 right-3 bg-bakery-gold text-white">
@@ -76,6 +80,7 @@ const BakeryBestsellers: React.FC = () => {
                     <span className="text-sm font-medium">{product.rating}</span>
                   </div>
                 </div>
+                <p className="text-gray-600 text-sm mt-1">{product.description}</p>
                 <p className="text-bakery-brown font-semibold mt-2">{product.price} ₽</p>
               </CardContent>
               <CardFooter className="pt-0 pb-4">

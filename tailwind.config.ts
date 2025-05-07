@@ -1,10 +1,4 @@
-
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
 import type { Config } from "tailwindcss";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const config = {
   darkMode: ["class"],
@@ -61,21 +55,15 @@ const config = {
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
         },
-        bakery: {
-          'brown': '#9b5a3b',
-          'cream': '#FFF5E1',
-          'gold': '#f3c06b',
-          'cinnamon': '#D2691E',
-          'butter': '#F8D568',
-          'chocolate': '#3C2218',
-        },
+        "bakery-brown": "#8B5E3C",
+        "bakery-chocolate": "#654321",
+        "bakery-cream": "#F5ECD6",
+        "bakery-gold": "#D4AF37",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -97,12 +85,12 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
+        'playfair': ['"Playfair Display"', 'serif'],
         'poppins': ['Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
 } satisfies Config;
 
 export default config;
