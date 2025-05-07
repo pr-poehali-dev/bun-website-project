@@ -46,17 +46,6 @@ const BakeryHero: React.FC = () => {
               alt="Свежие булочки с корицей" 
               className="rounded-2xl shadow-xl relative z-10"
             />
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-bakery-cream rounded-full">
-                  <Icon name="Star" className="h-5 w-5 text-bakery-gold" />
-                </div>
-                <div>
-                  <p className="font-medium">Хит продаж</p>
-                  <p className="text-sm text-gray-600">Булочки с корицей</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
